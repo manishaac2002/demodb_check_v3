@@ -10,10 +10,11 @@ const pool = mysql.createPool({
   database: process.env.MYSQL_DATABASE_NAME
 }).promise()
 
-async function createNewUser(data) {
-  const result = await pool.query(` INSERT INTO admin (user_id,admin_mobile_number,admin_profile_url,created_by)
-  VALUES(?,?,?,?)`, [user_id,admin_mobile_number,admin_profile_url,created_by])
-  return result
+
+async function insertLastUserIdInAuthTable(data, callback) {
+  const insertLastUserIdInAuthTableResult = await pool.query(`INSERT INTO auth(lastUserId,user_email,user_password,user_type,created_at,updated_at,created_by)
+  VALUES (?,?,?,?,?)`, callback.lastUserId, data.user_email, data.user_password, data.user_type, data.created_at, data.updated_at, data.created_by)
+  return callback, insertLastUserIdInAuthTableResult
 }
 
 pool.getConnection((error, connection) => {
@@ -28,4 +29,4 @@ pool.on('error', (err) => {
   console.error('Database pool error:', err);
 });
 
-module.exports = createNewUser
+module.exports = { createNewUser, insertLastUserIdInAuthTable }
