@@ -1,10 +1,12 @@
-const express = require('express')
-const { createAdminDetailsController, getAdminDetailsController } = require('./controller')
+import express from "express";
+
 const app = express()
 
+//routers api
 app.get('/get-user', getAdminDetailsController)
-app.post('/create-user', createAdminDetailsController)
 
-app.listen(3000, () => {
-  console.log(`Server is running on port 3000`);
+//port connection
+const port =5002
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 })

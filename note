@@ -1,13 +1,1 @@
-// this repo is purpose for the database flow check for example id, whether it is inserting or not
-
-async function createNewUser(data, callback) {
-  try {
-    console.log("this is create new user");
-    const result = await pool.query(` INSERT INTO admin (user_id,admin_mobile_number,admin_profile_url,created_by)
-    VALUES(?,?,?,?)`, [data.user_id, data.admin_mobile_number, data.admin_profile_url, data.created_by])
-    const lastUserId = result.admin_access_id
-    callback(null, lastUserId)
-    return result
-  } catch (error) {
-    console.log(error)
-  }}
+// this repo is for purpose db templates
