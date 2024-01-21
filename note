@@ -1,1 +1,17 @@
 // this repo is for purpose db templates
+
+
+// this is static code insert query
+// const userDetails ={
+//   tableName:"student",
+//   columnNames:"name, email, phone",
+//  valuePlaceholders:"manisha, nisha@gmail.com, 234567890"
+//  }
+ 
+//  const tableName = userDetails.tableName;
+//  const columnNames = userDetails.columnNames
+//  const valuePlaceholders = userDetails.valuePlaceholders
+ 
+ 
+//  const sqlStatement = `INSERT INTO ${tableName} (${columnNames}) VALUES (${valuePlaceholders})`;
+//  console.log(sqlStatement);
