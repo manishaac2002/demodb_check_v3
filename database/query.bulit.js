@@ -3,7 +3,7 @@ import poolConnection from './sql.configs.js'
 export const insertQueryTemplate = async (insertData) => {
 
   const insertData = await poolConnection.pool(insertQuery)
-  
+
   const insertQuery = (data) => {
     const { tableName, columns } = data
     const columnNames = columns.map(column => column.name).join(', ');
