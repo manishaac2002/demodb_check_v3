@@ -15,7 +15,7 @@ const insertQueryTemplate = (data) => {
 const data = {
   tableName: 'employees',
   columnNames: ['first_name', 'last_name', 'salary',],
-  valuePlaceholders: ['trdyg', 'dfghjkn', 'sdfghjkl',]
+  valuePlaceholders: ['manisha', 'sekeran', '1324567',]
 };
 
 const insertQuery = insertQueryTemplate(data);
