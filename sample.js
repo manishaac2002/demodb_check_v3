@@ -1,4 +1,4 @@
-
+//this is working insert query orm
 const insertQueryTemplate = (data) => {
   const tableName = data.tableName;
   const columnNames = data.columnNames.join(', ');
