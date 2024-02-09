@@ -1,9 +1,11 @@
 import express from "express";
-import controller from "./controller/controller.js";
+import controllers from "./controller/controller.js";
+
 const app = express()
 
 //routers api
-app.get('/get-admin', controller.getAdminDetailsController)
+app.get('/get-admin-details', controllers.getAdminDetailsController)
+app.post('/create-new-admin',controllers.createNewAdmin)
 
 //port connection
 const port = 5002
