@@ -9,7 +9,6 @@ export const insertQueryTemplate = async (insertData) => {
     const { tableName, columns } = data
     const columnNames = columns.map(column => column.name).join(', ');
     const valuePlaceholders = columns.map(() => '?').join(', ');
-
     return `INSERT INTO ${tableName} (${columnNames}) VALUES (${valuePlaceholders})`;
   };
 
