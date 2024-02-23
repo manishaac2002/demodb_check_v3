@@ -1,6 +1,6 @@
 import poolConnection from './sql.configs.js'
 
-//check the insertQueryTemplate function
+//check the insertQueryTemplate function 
 export const insertQueryTemplate = async (insertData) => {
 
   const insertData = await poolConnection.pool(insertQuery)
