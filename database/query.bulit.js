@@ -12,10 +12,10 @@ export const insertQueryTemplate = async (insertData) => {
 
     return `INSERT INTO ${tableName} (${columnNames}) VALUES (${valuePlaceholders})`;
   };
+
   if (insertQuery.length > 0) {
     console.log("Error occurring while inserting data ,check the database");
-  }
-  else {
+  } else {
     console.log('Data inserted successFully');
   }
 }
